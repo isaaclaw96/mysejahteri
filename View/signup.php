@@ -32,7 +32,7 @@
             echo "Please Sign Up Below!";
         }
     ?>
-    <form action="signup.inc.php" method="post">
+    <form action="../Controller/signup.inc.php" method="post">
                 <input type="text" name="email" placeholder="Enter Email">
                 <br>
                 <input type="text" name="name" placeholder="Enter Your Name">

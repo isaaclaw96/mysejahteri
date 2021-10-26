@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2021 at 03:38 AM
+-- Generation Time: Oct 26, 2021 at 02:58 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -29,11 +29,24 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `check_in` (
   `check_in_id` int(11) NOT NULL,
-  `check_in_phone` varchar(20) NOT NULL,
   `check_in_location` varchar(255) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT current_timestamp(),
   `customer_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `check_in`
+--
+
+INSERT INTO `check_in` (`check_in_id`, `check_in_location`, `date_created`, `customer_id`) VALUES
+(1, '', '2021-10-25 14:58:58', 18),
+(2, '', '2021-10-25 15:09:38', 19),
+(3, '', '2021-10-25 15:27:34', 19),
+(4, '', '2021-10-25 15:49:57', 19),
+(5, '', '2021-10-25 15:51:20', 19),
+(6, '', '2021-10-26 00:32:12', 19),
+(7, '', '2021-10-26 00:33:17', 19),
+(8, '', '2021-10-26 00:49:24', 19);
 
 -- --------------------------------------------------------
 
@@ -47,6 +60,13 @@ CREATE TABLE `company` (
   `company_branch` varchar(255) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `company`
+--
+
+INSERT INTO `company` (`company_id`, `company_name`, `company_branch`, `date_created`) VALUES
+(1, 'Company 1 Sdn Bhd', '', '2021-10-25 14:40:46');
 
 -- --------------------------------------------------------
 
@@ -87,9 +107,11 @@ INSERT INTO `customers` (`customer_id`, `customer_email`, `customer_phone`, `cus
 (16, 'qwer@qwer.com', '0123456789', '', 'qwer', 0, '2021-10-24 15:35:31'),
 (17, 'ewq@wqe.com', '0123456789', '', 'okokoko', 0, '2021-10-24 15:36:09'),
 (18, 'kk@kk.com', '01234566698', '', 'kk', 0, '2021-10-25 00:46:14'),
-(19, 'arjun@arjun.com', '00112233', '', 'arjun', 0, '2021-10-25 00:51:33'),
+(19, 'arjun@arjun.com', '00112233', '', 'Arjun', 0, '2021-10-25 00:51:33'),
 (20, 'iz@iz.com', '11223344', '', 'iz', 0, '2021-10-25 00:52:30'),
-(21, 'ishak@ishak.com', '00224466', '', 'pdiasoasidhoiasd', 0, '2021-10-25 00:53:58');
+(21, 'ishak@ishak.com', '00224466', '', 'pdiasoasidhoiasd', 0, '2021-10-25 00:53:58'),
+(22, 'ash@ash.com', '22446688', '', 'Ash', 0, '2021-10-25 09:11:56'),
+(23, 'dk@dk.com', '9988776655', '', 'dk', 0, '2021-10-25 13:51:03');
 
 -- --------------------------------------------------------
 
@@ -119,7 +141,11 @@ INSERT INTO `tac` (`tac_id`, `tac_phone`, `tac_tac`, `tac_created_at`) VALUES
 (8, '', 430946, '2021-10-24 16:05:35'),
 (9, '', 405675, '2021-10-24 16:05:58'),
 (10, '', 645432, '2021-10-24 16:06:05'),
-(11, '', 340592, '2021-10-25 00:53:58');
+(11, '', 340592, '2021-10-25 00:53:58'),
+(12, '', 401889, '2021-10-25 09:11:56'),
+(13, '', 212424, '2021-10-25 09:45:20'),
+(14, '', 634981, '2021-10-25 14:02:27'),
+(15, '', 477543, '2021-10-25 14:58:58');
 
 -- --------------------------------------------------------
 
@@ -180,25 +206,25 @@ ALTER TABLE `user_admin`
 -- AUTO_INCREMENT for table `check_in`
 --
 ALTER TABLE `check_in`
-  MODIFY `check_in_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `check_in_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
-  MODIFY `company_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `company_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `tac`
 --
 ALTER TABLE `tac`
-  MODIFY `tac_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `tac_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `user_admin`

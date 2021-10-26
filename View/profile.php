@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    include 'db.sql.php';
+    include '../Model/db.sql.php';
 
     echo "<h1> PROFILE </h1>";
 
@@ -10,7 +10,7 @@
             echo "<p> Update Not Successful</p>";
         }
     }
-    elseif($_GET['update'] == 'success'){
+    elseif(isset($_GET['update']) == 'success'){
         echo "<p> Update Successful!</p>";
     }
     echo "Name: ".$_SESSION['name'];    

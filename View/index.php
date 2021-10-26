@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="login.inc.php" method="post">
+    <form action="../Controller/login.inc.php" method="post">
         <input type="text" name="email" placeholder="Email">
         <input type="text" name="phone" placeholder="Phone">
         <button type="submit" name="login-submit">Login</button>

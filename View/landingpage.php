@@ -24,7 +24,7 @@
     </form>
 
 
-    <form action="logout.inc.php"  method="post">
+    <form action="../Controller/logout.inc.php"  method="post">
             <button type="submit" name="logout-submit">Logout</button>
     </form>
     
